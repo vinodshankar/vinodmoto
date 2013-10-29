@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+
+<script type="text/javascript">
+	
+	function hasStorage(){
+		try {
+			var nt = new Date().getTime();
+			localStorage.setItem('hscheck', nt);
+			var st = localStorage.getItem('hscheck');
+			if (nt == st){
+				console.log("hasStorage res: true");
+				return true;
+			}else{
+				console.log("hasStorage res: false");
+				return false;
+			}
+		} catch(err) {
+			console.log("hasStorage catch:"+err);
+			return false;
+		}
+
+	}
+	
+	function go(){  
+		try{
+			if (!hasStorage()){
+				document.body.innerHTML += "Local Storage NO";
+			}else{
+				document.body.innerHTML += "Local Storage YES";
+			}
+		}catch(err){
+			console.log(err);
+		}
+		
+	}; 
+	
+</script>
+
+</head>
+
+<body onload="go()">
+Version 2<br />
+Local storage test<br />
+</body>
+
+</html>
