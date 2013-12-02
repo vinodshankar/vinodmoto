@@ -1,0 +1,1 @@
+<input type="button" onclick="check()" value="Check window">

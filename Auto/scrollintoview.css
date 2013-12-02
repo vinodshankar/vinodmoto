@@ -1,0 +1,31 @@
+		body {
+			font-family: Segoe UI, sans-serif;
+			font-size: 11pt;
+			line-height: 1.3em;
+		}
+		p {
+			margin: 9px 0;
+			border: 2px dashed #abc;
+			padding: 5px 10px;
+			background-color: #def;
+		}
+		p.first,
+		p.last {
+			background-color: #fdd;
+			border-color: #caa;
+		}
+		.notify {
+			background: #c33;
+			margin-left: -125px;
+			padding: 10px 15px;
+			border: 1px solid #933;
+			border-radius: 5px;
+			box-shadow: 0 2px 3px #999;
+			position: fixed;
+			width: 250px;
+			text-align: center;
+			left: 50%;
+			top: 25px;
+			color: #fcc;
+			font-weight: bold;
+		}

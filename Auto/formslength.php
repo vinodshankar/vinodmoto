@@ -1,0 +1,8 @@
+<form name="Form1"></form>
+<form name="Form2"></form>
+<form></form>
+
+<p>Number of forms:
+<script>
+document.write(document.forms.length);
+</script></p>

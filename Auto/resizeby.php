@@ -1,0 +1,1 @@
+<input type="button" onclick="resizeWindow()" value="Resize window">
