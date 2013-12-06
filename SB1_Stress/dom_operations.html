@@ -1,0 +1,73 @@
+<html>
+<script>
+var btn;
+var time = 0;
+	
+function creatediv2(){	
+	btn=document.createElement("div");
+	btn.setAttribute('id',"Div2");
+	btn.style.width = "100px";
+	btn.style.height = "100px";
+	btn.style.left = "100px";
+	btn.style.top = "100px";
+	btn.style.position = "absolute";
+	btn.style.background = "#FF0000";
+	btn.style.border = "1px solid #006";
+	btn.innerHTML = 'Test Div 2';	
+	document.body.appendChild(btn);
+	setTimeout(creatediv3, 1000);
+}	
+
+function creatediv3(){	
+	btn=document.createElement("div");
+	btn.setAttribute('id',"Div3");
+	btn.innerHTML = 'Test Div 3';	
+	document.body.appendChild(btn);
+	setTimeout(addevents, 1000);
+} 	
+function createdom()
+{
+	btn=document.createElement("div");
+	btn.setAttribute("id", "Div");
+	var t=document.createTextNode("Hi There, How are u");
+	btn.appendChild(t); 
+	btn=document.createElement("button");
+	document.body.appendChild(btn);
+	setTimeout(creatediv2, 1000);
+
+}
+function removedom(){
+	var node = document.getElementById("Div");
+	if (node.parentNode) {
+	  node.parentNode.removeChild(node);
+	}
+	setTimeout(createdom, 1000);
+
+}
+ 
+function modifyText() { 
+	var t2 = document.getElementById("Div");
+	t2.firstChild.nodeValue = "Events";
+}
+function addevents(){
+
+ 
+var el = document.getElementById("Div");
+el.addEventListener("click", modifyText, false);
+setTimeout(removeevents, 1000);
+}
+
+function removeevents(){
+ 
+var el = document.getElementById("Div");
+el.removeEventListener('click', modifyText, false);
+setTimeout(removedom, 1000);
+}
+
+setTimeout(createdom, 1000);
+
+</script>
+<body>
+
+</body>
+</html>
